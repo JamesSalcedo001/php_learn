@@ -29,8 +29,17 @@
     echo $colors_two[2];
 
     // associative arrays => each key has a specific value assigned to it, it can be any string or integer similar to dictionaries or objects
-    $user = array("name" => "Alice", "age" => 30);
+    $user = array(
+        "name" => "Alice", 
+        "age" => 30,
+        "email" => "alice@example.com"
+    );
+
     $user_two = ["name" => "Alice", "age" => 30];
+
+    echo $user["name"];
+    echo $user_two["age"];
+    
 
     foreach ($colors as $color) {
         echo $color . " ";
