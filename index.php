@@ -109,10 +109,27 @@
 
 
     // functions
+
+    function sayHello() {
+        return "Hello, World!<br>";
+    }
+    
+    echo sayHello();
+
+    // function with parameters
     function greet($name) {
         return "Hello " . $name . "!" . " <br>";
     }
 
     echo greet("Bob") . " <br>";
-    
+
+
+    // function with default parameter values
+
+    function greetPerson($name = "Guest") {
+        return "Welcome, $name! <br>";
+    }
+
+    echo greetPerson();
+    echo greetPerson("Bob");
 ?>
