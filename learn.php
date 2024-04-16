@@ -33,6 +33,25 @@
     $name = "Alice";
     echo "Hello, " . $name . " <br>";
 
+
+    // data types 
+
+    # scalar types: int, float, string, bool
+
+    # compound types: array, object
+
+    # special types: resource, null
+
+
+
+    $integer = 42;
+    $float = 42.5;
+    $string = "Hello this is James";
+    $boolean = true;
+    $array = [1, 2, 3, "four"];
+    $null = NULL;
+    echo $string . "<br>";
+
     // arrays
     // to create an array, initialize with a variable and then use array() syntax, as a constructor.
     // can create both indexed arrays or associative arrays 
