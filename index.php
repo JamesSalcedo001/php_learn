@@ -132,4 +132,81 @@
 
     echo greetPerson();
     echo greetPerson("Bob");
+
+
+    // function with multiple parameters
+
+    function addNumbers($num1, $num2) {
+        return $num1 + $num2;
+    }
+
+    echo addNumbers(5, 3) . "<br>";
+
+
+    // return multiple values
+
+    function getMinMax($numbers) {
+        return [
+            "min" => min($numbers),
+            "max" => max($numbers)
+        ];
+    }
+
+    $result = getMinMax([1, 2, 3, 4, 5]);
+    echo "Min: " . $result["min"] . "<br> Max: " . $result["max"] . "<br>";
+
+    // variable functions - store function in a variable
+
+    function sayGoodbye() {
+        return "Goodbye!<br>";
+    }
+
+    $func = "sayGoodbye";
+    echo $func();
+
+    // functions within functions
+
+    function outer() {
+        echo "Outside <br>";
+
+        function inner() {
+            echo "Inside<br>";
+        }
+        inner();
+    }
+
+    outer();
+
+    // recursive function - calls itself to perform a task, like calculating a factorial
+    function factorial($number) {
+        if ($number <= 1) {
+            return 1;
+        } else {
+            return $number * factorial($number- 1);
+        }
+    }
+
+    echo factorial(5) . "<br>";
+
+    // function calling another function/ higher order functions
+
+    function multiply($x) {
+        return function($y) use ($x) {
+            return $x * $y;
+        };
+    }
+
+    $double = multiply(2);
+    echo $double(3) . " <br>";
+
+    
+
+    // utility function that can be used to sanitize input data for HTML output
+    function sanitize($data) {
+        return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
+    }
+    $userInput = "<script>alert('hi');</script>";
+    echo sanitize($userInput); 
+    
+
 ?>
