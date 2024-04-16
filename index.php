@@ -105,6 +105,27 @@
         echo "Iteration $i<br>";
     }
 
+    // switch case
+    $grade = "B";
+    switch ($grade) {
+        case "A":
+            echo "Excellent! <br>";
+            break;
+        case "B":
+            echo "Very Good! <br>";
+            break;
+        case "C":
+            echo "Good! <br>";
+            break;
+        case "D":
+            echo "Needs improvement <br>";
+            break;
+        case "F":
+            echo "Fail <br>";
+            break;
+        default:
+            echo "Invalid grade <br>";
+    }
 
 
 
