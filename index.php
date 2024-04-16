@@ -79,6 +79,35 @@
         echo "$key: $value " . " <br>";
     }
 
+
+
+    // control structures
+    // if else elseif
+
+    $score = 75;
+    if ($score > 90) {
+        echo "Excellent!<br>";
+    } elseif ($score > 50) {
+        echo "Good Job!<br>";
+    } else {
+        echo "Needs improvement.<br>";
+    }
+
+    // while loop
+    $count = 1;
+    while ($count <= 5) {
+        echo "Count is: $count<br>";
+        $count++;
+    }
+
+    // for loop
+    for ($i = 0; $i < 3; $i++) {
+        echo "Iteration $i<br>";
+    }
+
+
+
+
     // functions
     function greet($name) {
         return "Hello " . $name . "!" . " <br>";
