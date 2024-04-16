@@ -6,13 +6,13 @@
 
     // simple php script
     // end lines with semicolons
-    echo "Hello World!";
+    echo "Hello World!" . " <br>";
 
     // variables
     // start with $
     // . works for concatenation of variables and strings, + only works when they can be converted into numbers for addition
     $name = "Alice";
-    echo "Hello, " . $name;
+    echo "Hello, " . $name . " <br>";
 
     // arrays
     // to create an array, initialize with a variable and then use array() syntax, as a constructor.
@@ -22,11 +22,11 @@
     $colors = array("Red", "Green", "Blue");
     $colors_two = ["Red", "Green", "Blue"];
 
-    echo $colors[0];
-    echo $colors[1];
-    echo $colors[2];
+    echo $colors[0] . " <br>";
+    echo $colors[1] . " <br>";
+    echo $colors[2] . " <br>";
 
-    echo $colors_two[2];
+    echo $colors_two[2] . " <br>";
 
     // associative arrays => each key has a specific value assigned to it, it can be any string or integer similar to dictionaries or objects
     $user = array(
@@ -37,12 +37,53 @@
 
     $user_two = ["name" => "Alice", "age" => 30];
 
-    echo $user["name"];
-    echo $user_two["age"];
-    
+    $car = [
+        "make" => "Toyota",
+        "model" => "Corolla",
+        "year" => 2021
+    ];
+
+    echo $car["make"] . " <br>";
+    echo $car["model"] . " <br>";
+
+    echo $user["name"] . " <br>";
+    echo $user_two["age"] . " <br>";
+
+
+    // multidimensional arrays
+    // array of arrays
+    $multi = [
+        ["name" => "Tom", "age" => 22],
+        ["name" => "Jerry", "age" => 30]
+    ];
+
+    // access and loop through multidimensional array
+    foreach ($multi as $person) {
+        echo $person["name"] . " is " .$person["age"] . " years old.<br>";
+    }
+
 
     foreach ($colors as $color) {
-        echo $color . " ";
+        echo $color . " " . " <br>";
     }
+
+
+
+    foreach ($car as $key => $value) {
+        echo "$key: $value "  . " <br>";
+    } 
+
+    // looping through displaying keys and values 
+
+    foreach ($user as $key => $value) {
+        echo "$key: $value " . " <br>";
+    }
+
+    // functions
+    function greet($name) {
+        return "Hello " . $name . "!" . " <br>";
+    }
+
+    echo greet("Bob") . " <br>";
     
 ?>
