@@ -154,6 +154,8 @@
     $colors = ["Red", "Green", "Blue"];
     sort($colors);
     print_r($colors);
+    echo "<br>";
+
 
 
     // array_merge
@@ -164,6 +166,8 @@
     $result = array_merge($array1, $array2);
 
     print_r($result);
+    echo "<br>";
+
 
 
     // array_push
@@ -171,6 +175,8 @@
     $colors = ["Red", "Green"];
     array_push($colors, "Blue", "Yellow");
     print_r($colors);
+    echo "<br>";
+
 
 
     // array_map
@@ -180,6 +186,8 @@
     $squared = array_map(function($num) { return $num * $num; }, $numbers );
 
     print_r($squared);
+    echo "<br>";
+
 
 
     // array_slice
@@ -188,12 +196,16 @@
 
     $sliced = array_slice($fruits, 1, 3);
     print_r($sliced);
+    echo "<br>";
+
 
     // array_splice
 
     $input = ["Red", "Green", "Blue", "Yellow"];
     array_splice($input, 2, 1, "Orange");
     print_r($input);
+    echo "<br>";
+
 
     // array_filter
 
@@ -202,8 +214,50 @@
         return $num % 2 == 0;
     });
     print_r($even);
+    echo "<br>";
+
+
+    // array_reduce
+
+    $numbers = [1, 2, 3, 4];
+    $sum = array_reduce($numbers, function($carry, $item) {
+        return $carry + $item;
+    }, 0);
+    echo "<br> sum of reduced numbers: ", $sum;
 
     
+    // array_keys
+
+    $age = ["Peter" => 41, "Jane" => 34, "John" => 47];
+    $keys = array_keys($age);
+    print_r($keys);
+    echo "<br>";
+
+    // array_values
+
+    $age = ["Peter" => 41, "Jane" => 34, "John" => 47];
+    $values = array_values($age);
+    print_r($values);
+    echo "<br>";
+
+
+    // array_unique
+
+    $dupes = ["apple", "banana", "apple", "banana", "orange", "berry"];
+
+    $unique = array_unique($dupes);
+    print_r($unique);
+    echo "<br>";
+
+
+    // array_reverse
+
+    $nums = [1, 2, 3, 4, 5];
+
+    $reversed = array_reverse($nums);
+    print_r($reversed);
+    echo "<br>";
+
 
     
 
@@ -344,6 +398,7 @@
 
     echo greetPerson();
     echo greetPerson("Bob");
+
 
 
     // function with multiple parameters
