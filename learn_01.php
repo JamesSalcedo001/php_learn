@@ -2,7 +2,6 @@
 <h1>This is HTML outside of php tags</h1>
 
 <?php 
-
     // php scripts start with <?php and end with ? >
 
     // single line comment
@@ -182,6 +181,29 @@
 
     print_r($squared);
 
+
+    // array_slice
+
+    $fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
+
+    $sliced = array_slice($fruits, 1, 3);
+    print_r($sliced);
+
+    // array_splice
+
+    $input = ["Red", "Green", "Blue", "Yellow"];
+    array_splice($input, 2, 1, "Orange");
+    print_r($input);
+
+    // array_filter
+
+    $numbers = [1, 2, 3, 4, 5];
+    $even = array_filter($numbers, function($num) {
+        return $num % 2 == 0;
+    });
+    print_r($even);
+
+    
 
     
 
@@ -401,14 +423,6 @@
     $double = multiply(2);
     echo $double(3) . " <br>";
 
-    
 
-    // utility function that can be used to sanitize input data for HTML output
-    function sanitize($data) {
-        return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
-    }
-    $userInput = "<script>alert('hi');</script>";
-    echo sanitize($userInput); 
-    
 
 ?>
