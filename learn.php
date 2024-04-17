@@ -158,6 +158,18 @@
         echo "Needs improvement.<br>";
     }
 
+
+    $age = 20;
+
+    if ($age >= 18) {
+        echo "You are an adult";
+    } elseif ($age >= 13) {
+        echo "You are a teenager";
+    } else {
+        echo "You are a child";
+    }
+
+
     // while loop
     $count = 1;
     while ($count <= 5) {
@@ -190,6 +202,56 @@
             break;
         default:
             echo "Invalid grade <br>";
+    }
+
+
+    $day = "Tue";
+
+    switch($day) {
+        case "Mon":
+            echo "It is monday <br>";
+            break;
+        case "Tue":
+            echo "It is tuesday <br>";
+            break;
+        case "Wed":
+            echo "It is wednesday <br>";
+            break;
+        case "Thurs":
+            echo "It is thursday <br>";
+            break;
+        case "Fri":
+            echo "It is friday <br>";
+            break;
+        case "Sat":
+        case "Sun":
+            echo "It is the weekend! <br>";
+            break;
+        default:
+            echo "not a valid day <br>";
+            
+    }
+
+    // group saturday and sunday together
+
+
+    // do while loop
+    
+    $count = 6;
+
+    do {
+        echo "Count is $count <br>";
+        $count++;
+    } while ($count <= 5);
+
+    // executes once even though the condition is false from the start, guaruntees block will always at least run once
+
+    
+    // foreach
+    $cats = ["Tomo", "Binx", "Dhalia"];
+
+    foreach ($cats as $cat) {
+        echo "Cat is named: $cat <br>";
     }
 
 
