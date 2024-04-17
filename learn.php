@@ -303,6 +303,18 @@
     $result = getMinMax([1, 2, 3, 4, 5]);
     echo "Min: " . $result["min"] . "<br> Max: " . $result["max"] . "<br>";
 
+
+    // return multiple values
+
+    function calculate($num1, $num2) {
+        $sum = $num1 + $num2;
+        $product = $num1 * $num2;
+        return ["sum" => $sum, "product" => $product];
+    }
+
+    $result = calculate(5, 3);
+    echo "Sum: " . $result["sum"] . ", Product: " . $result["product"] . "<br>";
+
     // variable functions - store function in a variable
 
     function sayGoodbye() {
