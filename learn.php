@@ -145,6 +145,48 @@
     }
 
 
+    // array functions
+
+    // count 
+    $colors = ["Red", "Blue", "Green"];
+    echo count($colors) . "<br>";
+
+    // sort
+    $colors = ["Red", "Green", "Blue"];
+    sort($colors);
+    print_r($colors);
+
+
+    // array_merge
+
+    $array1 = ["Red", "Blue"];
+    $array2 = ["Green", "Yellow"];
+
+    $result = array_merge($array1, $array2);
+
+    print_r($result);
+
+
+    // array_push
+
+    $colors = ["Red", "Green"];
+    array_push($colors, "Blue", "Yellow");
+    print_r($colors);
+
+
+    // array_map
+
+    $numbers = [1, 2, 3, 4, 5];
+
+    $squared = array_map(function($num) { return $num * $num; }, $numbers );
+
+    print_r($squared);
+
+
+    
+
+
+
 
     // control structures
     // if else elseif
