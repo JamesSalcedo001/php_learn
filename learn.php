@@ -52,6 +52,33 @@
     $null = NULL;
     echo $string . "<br>";
 
+
+    // operators
+
+    $x = 10;
+    $y = 20;
+    // assignment
+
+    // arithmetic
+    $sum = $x + $y;
+    $difference = $y - $x;
+    $product = $x * $y;
+    $quotient = $y / $x;
+    $remainder = $y % $x;
+
+    $x += 5;
+    // $y -= 5;
+
+    // comparison
+    $is_equal = ($x == 15); // true
+    $is_identical = ($x === "15"); // false because they are different data types;
+
+    // logical
+    $is_valid = ($x < 20 && $y > 15); // true
+
+    echo "Sum: $sum, Difference: $difference <br>";
+
+
     // arrays
     // to create an array, initialize with a variable and then use array() syntax, as a constructor.
     // can create both indexed arrays or associative arrays 
