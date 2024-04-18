@@ -152,7 +152,20 @@
     echo $fruitString;
     echo "<br>";
 
-    
+
+    // trim
+
+    $text7 = "     Hello, World!  ";
+    $trimmedText = trim($text7);
+    echo "Start" . $trimmedText . "End";
+    echo "<br>";
+
+
+    // str_repeat
+    echo str_repeat("Hi!", 3);
+    echo "<br>";
+
+
 
 
 
