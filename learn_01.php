@@ -78,6 +78,42 @@
     echo "Sum: $sum, Difference: $difference <br>";
 
 
+
+
+
+    // string functions
+
+
+    // strlen
+
+    $text1 = "Hello, World!";
+    echo "length of hello, world! ", strlen($text1);
+    echo "<br>";
+
+
+    // str_replace
+
+    $text2 = "Hello, World!";
+    $replacedText = str_replace("World", "PHP", $text2);
+    echo $replacedText . "<br>";
+
+
+    // strpos
+
+    $text3 = "Hello, World!";
+    $pos = strpos($text3, "World");
+    if ($pos !== false) {
+        echo "The string 'world' starts at position: $pos" . "<br>";
+    } else {
+        echo "The string 'world' was not found.";
+    };
+
+
+
+
+
+
+
     // arrays
     // to create an array, initialize with a variable and then use array() syntax, as a constructor.
     // can create both indexed arrays or associative arrays 
@@ -259,7 +295,106 @@
     echo "<br>";
 
 
-    
+    // array_diff
+
+    $array1 = ["a", "b", "c", "d"];
+    $array2 = ["a", "b", "e", "f"];
+    $difference = array_diff($array1, $array2);
+    print_r($difference);
+    echo "<br>";
+
+
+    // array_intersect
+
+    $array1 = ["a", "b", "c", "d"];
+    $array2 = ["a", "b", "e", "f"];
+    $intersection = array_intersect($array1, $array2);
+    print_r($intersection);
+    echo "<br>";
+
+
+    // array_multisort
+
+    $ages = [4, 3, 5];
+    $names = ["Tomo", "Binx", "Dhalia"];
+
+    array_multisort($ages, $names);
+    print_r($names);
+    echo "<br>";
+    print_r($ages);
+    echo "<br>";
+
+
+    // example two
+
+    $people_names = ["alice", "bob", "cynthia"];
+    $scores = [88, 95, 82];
+    $cities = ["new york", "los angeles", "chicago"];
+
+
+    array_multisort($scores, $people_names, $cities);
+
+    echo "Sorted names: ";
+    print_r($people_names);
+    echo "<br>";
+
+
+    echo "Sorted scores: ";
+    print_r($scores);
+    echo "<br>";
+
+
+    echo "Sorted cities: ";
+    print_r($cities);
+    echo "<br>";
+
+
+
+
+    // array_push
+
+    $stack = ["orange", "banana"];
+    array_push($stack, "apple", "raspberry");
+    print_r($stack);
+    echo "<br>";
+
+
+    // array_pop
+
+    $stack = ["orange", "banana"];
+    $item = array_pop($stack);
+    echo $item . "<br>";
+    print_r($stack);
+    echo "<br>";
+
+
+    // array_shift
+
+    $queue = ["orange", "apple", "banana", "raspberry"];
+    $removed = array_shift($queue);
+    echo "removed item: " . $removed . "<br>";
+    print_r($queue);
+    echo "<br>";
+
+
+    // array_unshift
+
+    array_unshift($queue, "mango", "pineapple");
+    print_r($queue);
+    echo "<br>";
+
+
+    // array_combine
+
+    $keys = ["foo", "bar", "baz"];
+    $values = [1, 2, 3];
+
+    $combined = array_combine($keys, $values);
+    print_r($combined);
+    echo "<br>";
+
+
+
 
 
 
@@ -280,7 +415,7 @@
     $age = 20;
 
     if ($age >= 18) {
-        echo "You are an adult";
+        echo "You are an adult . <br>";
     } elseif ($age >= 13) {
         echo "You are a teenager";
     } else {
