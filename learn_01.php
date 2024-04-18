@@ -675,4 +675,93 @@
 
 
 
+
+    // dates
+
+
+
+    // time 
+
+    $current_time = time();
+    echo $current_time;
+    echo "<br>";
+
+
+    // date
+
+
+    echo "current date: " . date("Y-m-d");
+    echo "<br>";
+
+    echo "day of week: " . date("l");
+    echo "<br>";
+
+
+    // timestamp
+
+    $timestamp = time();
+    echo "timestamp: " . date("F j, Y, g:i a", $timestamp);
+    echo "<br>";
+
+    // formatting options
+
+    /* 
+    
+        Y - four digit rep of year
+        m - numeric repr of a month with leading zeroes (01 - 12)
+        d - day of month with leading zeroes (01 - 31)
+        l - full textual rep of day of week
+        H - 24hr format of an hour with leading zeroes (00 - 23)
+        i - minutes with leading zeroes(00 - 59)
+        s - seconds "" "" "" (00 - 59)
+        a - ante meridiem or post meridiem (am or pm)
+
+    */
+
+
+    // strtotime
+
+    $str_to_time = strtotime("next Monday");
+    echo "next monday from today's date: " . date("Y-m-d", $str_to_time);
+    echo "<br>";
+
+
+    // adding or subtracting time
+
+    // add 10 days to current date
+
+    $date_in_10_days = strtotime("+10 days");
+    echo "date in ten days: " . date("Y-m-d", $date_in_10_days);
+    echo "<br>";
+
+
+    // subtracting days
+
+    $date_last_month = strtotime("-1 month");
+    echo "date last month: " . date("Y-m-d", $date_last_month);
+    echo "<br>";
+
+
+    // datetime class OOP approach
+
+    $date = new DateTime();
+    $date->modify(("+1 week"));
+    echo $date->format("Y-m-d");
+    echo "<br>";
+
+
+    // specific date
+
+    $specificDate = new DateTime("2024-03-10");
+    $specificDate->add(new DateInterval("P10D"));
+    echo $specificDate->format("Y-m-d");
+
+    
+
+
+
+
+
+
+
 ?>
