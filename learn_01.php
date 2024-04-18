@@ -110,6 +110,53 @@
 
 
 
+    // strtoupper and strtolower
+
+    $text4 = "Hello, World!";
+    echo strtoupper($text4);
+    echo "<br>";
+
+    echo strtolower($text4);
+    echo "<br>";
+
+    
+
+    // substr
+
+    $text5 = "Hello, World!";
+    echo substr($text5, 7, 5);
+    echo "<br>";
+
+
+    // str_pad
+
+    $text6 = "Hello";
+    $paddedText = str_pad($text6, 10, ".");
+    echo $paddedText;
+    echo "<br>";
+
+
+    // explode
+
+    $data = "apple,orange,banana";
+    $fruits = explode(",", $data);
+    echo "splitting a string by , and converting to an array: <br>";
+    print_r($fruits);
+    echo "<br>";
+
+
+    // implode
+
+    $fruitString = implode(" | ", $fruits);
+    echo "joining an array by | and converting to a string: <br>";
+    echo $fruitString;
+    echo "<br>";
+
+    
+
+
+
+
 
 
 
