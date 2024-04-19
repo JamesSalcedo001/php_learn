@@ -48,6 +48,21 @@
 // }
 
 
+// append to existing file
+
+$filename = "newfile_02.txt";
+$file = fopen($filename, "a");
+
+if ($file === false) {
+    echo "Error in opening file for appending";
+    exit();
+}
+
+$text = "This is new content being appended.\n";
+fwrite($file, $text);
+fclose($file);
+echo "New content appended to the file";
+
 
 
 ?>

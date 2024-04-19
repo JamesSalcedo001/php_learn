@@ -1,1 +1,2 @@
 Hello, this file was just created
+This is new content being appended.
