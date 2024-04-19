@@ -104,4 +104,23 @@
 // }
 
 
+// listing files in directory
+
+// $files = scandir("new_directory");
+
+// foreach ($files as $file) {
+//     echo $file . "<br>";
+// }
+
+
+// $files = scandir("../php_learn");
+
+// foreach($files as $file) {
+//     if ($file != "." && $file != "..") {
+//         echo $file . "<br>";
+//     }
+// }
+
+
+
 ?>
