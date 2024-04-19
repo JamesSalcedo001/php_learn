@@ -50,18 +50,45 @@
 
 // append to existing file
 
-$filename = "newfile_02.txt";
-$file = fopen($filename, "a");
+// $filename = "newfile_02.txt";
+// $file = fopen($filename, "a");
 
-if ($file === false) {
-    echo "Error in opening file for appending";
-    exit();
-}
+// if ($file === false) {
+//     echo "Error in opening file for appending";
+//     exit();
+// }
 
-$text = "This is new content being appended.\n";
-fwrite($file, $text);
-fclose($file);
-echo "New content appended to the file";
+// $text = "This is new content being appended.\n";
+// fwrite($file, $text);
+// fclose($file);
+// echo "New content appended to the file";
+
+
+
+// file handling functions
+
+// $filename = "newfile_02.txt";
+// $content = file_get_contents($filename);
+// echo $content;
+
+
+
+// $newContent = "\nAdding this with file_put_contents.\n";
+// file_put_contents($filename, $newContent, FILE_APPEND);
+
+
+
+
+// error handling
+
+// $filename = "newfile.txt";
+// $content = file_get_contents($filename);
+
+// if ($content === false) {
+//     echo "Failed to read from file";
+// } else {
+//     echo $content;
+// }
 
 
 
