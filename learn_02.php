@@ -92,4 +92,16 @@
 
 
 
+// directories
+
+// $dirName = "new_directory";
+
+// if (!file_exists($dirName)) {
+//     mkdir($dirName);
+//     echo "Directory created";
+// } else {
+//     echo "Directory already exists";
+// }
+
+
 ?>
