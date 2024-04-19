@@ -123,4 +123,17 @@
 
 
 
+
+// error handling
+
+// try {
+//     1 / 0;
+//     throw new Exception("can't divide by zero!");
+// } catch (Exception $e) {
+//     echo "Caught exception: " . $e->getMessage();
+// } finally {
+//     echo "This block executes regardless of whether an exception was thrown";
+// }
+
+
 ?>
