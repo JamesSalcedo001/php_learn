@@ -28,9 +28,24 @@
 // }
 
 
-$filename = "newfile_03.txt";
+// $filename = "newfile_02.txt";
 
-if (file_exists($filename))
+// if (file_exists($filename)) {
+//     $file = fopen($filename, "r");
+//     if ($file === false) {
+//         echo "Error in opening file for reading";
+//         exit();
+//     }
+
+//     while (!feof($file)) {
+//         $line = fgets($file);
+//         echo $line . "<br>";
+//     }
+
+//     fclose($file);
+// } else {
+//     echo "The file $filename does not exist";
+// }
 
 
 
