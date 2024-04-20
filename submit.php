@@ -1,14 +1,17 @@
 <?php
-    // // check if form's submit is clicked
-    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //     // ensure form field name is not empty
-    //     if (!empty($_POST["name"])) {
-    //         $name = $_POST["name"]; // getting submitted data from form field
-    //         echo "Hello, " . htmlspecialchars($name) . "! Welcome to our site."; // display greeting and sanitize input
-    //     } else {
-    //         // empty field please enter name
-    //         echo "Please enter your name";
-    //     }
-    // }
 
-?>
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstname = htmlspecialchars($_POST["firstname"]);   
+    $lastname = htmlspecialchars($_POST["lastname"]);
+    $favoritepet = htmlspecialchars($_POST["favoritepet"]);
+
+    if (empty($firstname)) {
+        header("Location: h_w_p_2.php");
+        exit();
+    }
+
+
+    header("Location: h_w_p_2.php");
+} else {
+    header("Location: h_w_p_2.php");
+}
