@@ -7,9 +7,21 @@
 </head>
 <body>
     <form action="submit.php" method="POST">
-        <label for="name">Enter your name:</label>
-        <input type="text" id="name" name="name">
-        <input type="submit" value="Submit">
+        <label for="firstname">FirstName: </label>
+        <input id="firstname" type="text" name="firstname" placeholder="First name...">
+
+        <label for="lastname">LastName: </label>
+        <input id="lastname" type="text" name="lastname" placeholder="Last name...">
+
+        <label for="favoritepet">Favorite Pet?</label>
+        <select id="favoritepet" name="favoritepet">
+            <option value="None">None</option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Reptile">Reptile</option>
+        </select>
+
+        <button type="submit">Submit</button>
     </form>
     
 </body>
