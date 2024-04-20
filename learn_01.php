@@ -568,6 +568,19 @@
     }
 
 
+    // match only works with later versions of PHP, 8.0 and later
+
+    // $bool = true;
+    // $a = "1";
+    // $b = 4;
+
+    // $result_02 = match ($a) {
+    //     1, 3, 5 => "Variable a is equal to one",
+    //     2 => "Variable b is equal to two",
+    //     default => "none were a match",
+    // };
+
+    // echo $result;
 
     // functions
 
@@ -756,7 +769,7 @@
     $specificDate->add(new DateInterval("P10D"));
     echo $specificDate->format("Y-m-d");
 
-    
+
 
 
 
